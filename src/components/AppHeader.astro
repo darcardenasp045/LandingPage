@@ -22,7 +22,7 @@ import Contact from "./Contact.astro";
     const navlinks = document.querySelector("#navlinks");
     const hamburger = document.querySelector("#hamburger");
     const layer = document.querySelector("#navLayer");
-    const links = [...navlinks.querySelector("ul").children];
+    // const links = [...navlinks.querySelector("ul").children];
 
     function toggleNavlinks() {
         if (isToggled) {
@@ -35,17 +35,17 @@ import Contact from "./Contact.astro";
             layer.classList.remove("origin-top", "scale-y-100");
         }
     }
-    hamburger.addEventListener("click", () => {
-        isToggled = !isToggled;
-        toggleNavlinks();
-    });
+    // hamburger.addEventListener("click", () => {
+    //     isToggled = !isToggled;
+    //     toggleNavlinks();
+    // });
 
-    links.forEach((link) => {
-        link.addEventListener("click", () => {
-            isToggled = !isToggled;
-            toggleNavlinks();
-        });
-    });
+    // links.forEach((link) => {
+    //     link.addEventListener("click", () => {
+    //         isToggled = !isToggled;
+    //         toggleNavlinks();
+    //     });
+    // });
 </script>
 
 <header>
