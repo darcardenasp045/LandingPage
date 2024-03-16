@@ -1,0 +1,28 @@
+---
+interface Props{
+    title : String,
+    description: String,
+    href: String,
+    alt: String,
+    imagen: String
+
+}
+
+const {title, description,href, alt, imagen} = Astro.props;
+---
+<div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+    <a class="relative overflow-hidden rounded-xl" href={href}>
+      <img src={imagen}
+      alt={alt} loading="lazy" width="1000" height="667" class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"/>
+    </a>
+    <div class="mt-6 relative">
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
+        {title}
+      </h3>
+      <p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+        {description}
+      </p>
+     
+    </div>
+    
+  </div>
